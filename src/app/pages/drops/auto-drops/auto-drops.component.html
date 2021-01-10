@@ -1,0 +1,64 @@
+<div class="col-12 main-box shadow p-0 " [@bounceIn]="bounceIn">
+  <div class="title"><h4>Generate Promos</h4></div>
+  <mat-grid-list cols="11" rowHeight="100px">
+
+    <form #f="ngForm">
+      <mat-grid-tile colspan="5" rowspan="1">
+        <mat-form-field class="full-width">
+          <input id="pac-input" matInput />
+          <mat-placeholder class="placeholder">Search Location</mat-placeholder>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <!-- Map -->
+      <mat-grid-tile colspan="6" rowspan="5">
+        <div id="map"></div>
+      </mat-grid-tile>
+
+      <!-- <mat-grid-tile colspan="1" rowspan="1">
+      </mat-grid-tile> -->
+
+      <mat-grid-tile colspan="2" rowspan="1">
+        <mat-form-field class="radius">
+          <input id="radius" (focusout)="setRadius()" name="radius" [(ngModel)]="radius" matInput min="1" type="number"
+            value="1" />
+          <mat-placeholder class="placeholder">Enter Radius</mat-placeholder>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="2" rowspan="1">
+        <mat-form-field class="drop-count">
+          <input id="drops" name="count" [(ngModel)]="count" matInput type="number" min="1" max="100" value="1" />
+          <mat-placeholder class="placeholder">Drop Count</mat-placeholder>
+
+        </mat-form-field>
+      </mat-grid-tile>
+
+
+      <mat-grid-tile colspan="5" rowspan="1">
+        <mat-form-field class="full-width">
+          <mat-select #model ngModel name="model" required>
+            <mat-option *ngFor="let m of models" [value]="m.key">{{
+              m.name
+              }}</mat-option>
+          </mat-select>
+          <mat-placeholder class="placeholder">Select Model</mat-placeholder>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="4" rowspan="1">
+        
+        <button mat-raised-button color="accent" (click)="countFunction()" class="generate-btn">
+          Generate Drops
+        </button>
+        <button [disabled]="!drop_generated" class="drop-btn" mat-raised-button color="primary" (click)="saveDrop(f.value)">
+          Activate Drops
+        </button>
+      </mat-grid-tile>
+
+
+
+      <mat-grid-tile colspan="4" rowspan="1"> </mat-grid-tile>
+    </form>
+  </mat-grid-list>
+</div>

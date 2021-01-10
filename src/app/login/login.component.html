@@ -1,0 +1,51 @@
+<div class="x-body">
+  <!-- <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div> -->
+  <div id='stars'></div>
+  <div id='stars2'></div>
+  <div id='stars3'></div>
+
+    <form class="login-form" #form="ngForm" fxflex="" (ngSubmit)="onLogin(form.value)">
+      <div class="text-center">
+        <img class="logo1" src="../../../../assets/images/PQ3.png" [@bounceInDown]="bounceInDown">
+      </div>
+      <div class="text-center">
+        <img class="logo" src="../../../../assets/images/PQ3(2).png" [@flash]="flash">
+      </div>
+      
+      <div fxflex="" fxlayout="row" fxlayout.lt-md="column">
+        <div fxFlexFill>
+          <mat-form-field class="w-100">
+            <input matInput class="email-field" type='email' name='email' ngModel email required placeholder="Email">
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxflex="" fxLayout="row" fxLayout.lt-md="column">
+        <div fxFlexFill>
+          <mat-form-field class="w-100">
+            <input matInput class="password-field" name='password' ngModel type="password" required
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$" placeholder="Password">
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxflex="" fxLayout="row" fxLayout.lt-md="column" style="margin: 20px 0 30px 0">
+        <div fxFlex>
+          <mat-checkbox color="primary">Remember Me</mat-checkbox>
+        </div>
+        <div fxflex="" fxLayoutAlign="end">
+          <a routerLink='/password-reset'>Forget Password</a>
+        </div>
+      </div>
+      <div fxflex="" fxLayout="row" fxLayout.lt-md="column">
+        <div fxFlexFill>
+        <button mat-raised-button color="accent" [disabled]="form.invalid" class="w-100">Login</button>
+        </div>
+      </div>
+
+    </form>
+</div>
+  
+  

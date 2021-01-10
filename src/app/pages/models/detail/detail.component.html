@@ -1,0 +1,13 @@
+
+  <form #form="ngForm" *ngIf=" model;  else loading" (ngSubmit)="update(form.value)">
+    <mat-form-field >
+      <input name="name" #name ngModel ngModel required matInput placeholder="Previous Value: {{model}}" />
+    </mat-form-field>
+
+    <button mat-button  [disabled]="form.invalid" color="primary">Save Model</button>
+  </form>
+
+
+<ng-template #loading>
+  Loading Model...
+</ng-template>

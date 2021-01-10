@@ -1,0 +1,170 @@
+.full-width {
+    width: 100%;
+    margin: 30px
+  }
+
+  .main-box{
+    flex: 1;
+    width: 1020px;
+    height: 520px;
+    // margin: auto;
+    // margin-top: 20px;
+    background-color: white;
+    // border: 2px solid rgb(204, 201, 201);
+    // box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.24);
+  }
+  
+  .title{
+    height: 55px;
+    background-color: #f7f7f7;
+    // border-bottom: 2px solid rgb(240, 239, 239);
+    border-bottom: 1px solid rgb(221, 219, 219);
+  }
+  
+  h4{
+    margin-top: 0%;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    // color: #0000FF;
+  }
+
+  #map {
+    height: 400px;
+    width: 500px;
+    margin: auto;
+    margin-top: 25px;
+    border: 1px solid rgb(184, 181, 181);
+  }
+
+  .drop-btn {
+    margin-left: 6px;
+  }
+
+  .generate-btn{
+    margin-left: 50px;
+  }
+  /* Optional: Makes the sample page fill the window. */
+  // html, body {
+  //   height: 100%;
+  //   margin: 0;
+  //   padding: 0;
+  // }
+  // #description {
+  //   font-family: Roboto;
+  //   font-size: 15px;
+  //   font-weight: 300;
+  // }
+  
+  // #infowindow-content .title {
+  //   font-weight: bold;
+  // }
+  
+  // #b{
+  //   margin-top: 37px;
+  // }
+  
+  // #infowindow-content {
+  //   display: none;
+  // }
+  
+  // #map #infowindow-content {
+  //   display: inline;
+  // }
+  
+  // .pac-card {
+  //   margin: 10px 10px 0 0;
+  //   border-radius: 2px 0 0 2px;
+  //   box-sizing: border-box;
+  //   -moz-box-sizing: border-box;
+  //   outline: none;
+  //   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  //   background-color: #fff;
+  //   font-family: Roboto;
+  // }
+  
+  // #pac-container {
+  //   padding-bottom: 12px;
+  // }
+  
+  // .pac-controls {
+  //   display: inline-block;
+  //   padding: 5px 11px;
+  // }
+  
+  // .pac-controls label {
+  //   font-family: Roboto;
+  //   font-size: 13px;
+  //   font-weight: 300;
+  // }
+  
+  // .row {
+  //   margin-top: 15px
+  // }
+  
+  // #pac-input, #model{
+  //   width: 100%;
+  // }
+  
+  
+  #pac-input, #radius, #drops, #model {
+      line-height: normal;
+      background-color: #fff;
+      font-family: Roboto;
+      font-size: 15px;
+      font-weight: 300;
+      color: black;
+      padding: 7px 11px 7px 13px;
+      text-overflow: ellipsis;
+}  
+
+  // #pac-input:focus {
+  //   border-color: #4d90fe;
+  // }
+  
+  // #title {
+  //   color: #fff;
+  //   background-color: #4d90fe;
+  //   font-size: 25px;
+  //   font-weight: 500;
+  //   padding: 6px 12px;
+  // }
+
+
+//   mat-grid-tile .mat-figure {
+//     // top: 0;
+//     // left: 0;
+//     // right: 0;
+//     // bottom: 0;
+//     position: absolute;
+//     display: flex;
+//     align-items: inherit;
+//     justify-content: center;
+//     height: 100%;
+//     padding: 0;
+//     margin: 0;
+// }
+
+
+// .placeholder {
+//   font-weight: bold;
+//   font-size: larger;
+//   margin-left: 25px;
+// }
+
+// .location{
+//   margin-left: 25px;
+// }
+
+.radius{
+  margin-left: 70px;
+}
+
+.drop-count{
+  margin-left: 70px;
+}
+
+// .mat-place-holder{
+//   margin-left: 55px;
+// }

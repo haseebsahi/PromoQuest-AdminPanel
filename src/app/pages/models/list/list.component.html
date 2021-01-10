@@ -1,0 +1,47 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header [@bounceIn]="bounceIn">
+    <mat-panel-title style="color: blue;">Add  New Model </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+    <mat-form-field >
+      <input name="name" ngModel matInput required placeholder="Enter Model Name" />
+    </mat-form-field>
+
+    <button [disabled]="form.invalid" class="btn btn-secondary"><span>Add Model</span></button>
+  </form>
+</mat-expansion-panel>
+
+<div class="header">
+<mat-form-field>
+  <input
+    matInput
+    (keyup)="applyFilter($event.target.value)"
+    placeholder="Filter"
+  />
+</mat-form-field>
+</div>
+
+<div class="container mat-elevation-z8 shadow p-0" [@bounceIn]="bounceIn">
+  <table mat-table [dataSource]="dataSource" matSort>
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+      <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container  matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>AR-Models</th>
+      <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr class="center" mat-row *matRowDef="let row; columns: displayedColumns" routerLink="/models/{{row.key}}"></tr>
+  </table>
+
+  <mat-paginator
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+  ></mat-paginator>
+</div>

@@ -1,0 +1,18 @@
+
+<div class="header">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter" />
+  </mat-form-field>
+</div>
+
+<div class="container mat-elevation-z8 shadow p-0" [@bounceIn]="bounceIn">
+    <div class="title">
+        <h4>List of Captured Promos</h4>
+      </div>
+    <div *ngIf="table != ''" [innerHTML]="table | safeHtml"></div>
+</div>
+
+
+
+
+

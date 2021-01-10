@@ -1,0 +1,38 @@
+<form #form="ngForm" *ngIf=" user;  else loading" (ngSubmit)="update(form.value)">
+  <div class="example-container">
+    <!-- <div>
+      <mat-form-field>
+        <input name="name" ngModel matInput placeholder="Previous Value: {{model.name}}" />
+      </mat-form-field>
+    </div> -->
+    <!-- <div>
+      <mat-form-field>
+        <input name="email" ngModel matInput placeholder="Previous Value: {{model.email}}" id=input />
+      </mat-form-field>
+    </div> -->
+
+    <div>
+        <mat-form-field>
+          <input name="name" ngUser matInput />
+          <mat-placeholder class="placeholder">Previous Value: {{user.name}}</mat-placeholder>
+        </mat-form-field>
+      </div>
+
+
+    <div>
+      <mat-form-field>
+        <input name="email" ngUser matInput/>
+        <mat-placeholder class="placeholder">Previous Value: {{user.email}}</mat-placeholder>
+      </mat-form-field>
+    </div>
+
+
+    <div>
+      <button mat-raised-button color="primary">Update User</button>
+    </div>
+  </div>
+</form>
+
+<ng-template #loading>
+  Loading User...
+</ng-template>

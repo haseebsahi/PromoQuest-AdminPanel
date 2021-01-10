@@ -1,0 +1,55 @@
+<!-- <mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Add User </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+    <div class="example-container">
+      <mat-form-field>
+        <input name="name" ngModel matInput placeholder="First name" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input name="email" ngModel matInput placeholder="Email" />
+      </mat-form-field>
+
+      <button mat-button color="primary">Add User</button>
+    </div>
+  </form>
+</mat-expansion-panel> -->
+
+
+<div class="header">
+  <mat-form-field>
+
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter" />
+  </mat-form-field>
+</div>
+
+<div class="container mat-elevation-z8 p-0" [@bounceIn]="bounceIn">
+  <div class="title">
+    <h4>List of Registered Users</h4>
+  </div>
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Serial no.</th>
+      <td mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+      <td mat-cell *matCellDef="let row">{{ row.email }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row class="center" *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

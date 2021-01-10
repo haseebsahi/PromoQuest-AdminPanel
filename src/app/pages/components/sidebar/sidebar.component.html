@@ -1,0 +1,72 @@
+   
+    <div id="sidebar">
+        <div class="logo d-flex">
+            <a href="#">
+            <div class="logo-image-large">
+                <img class="logo-img" src="../../../../assets/images/PQ3B.png" [@slideInLeft]="slideInLeft">
+            </div>
+            </a>
+            <a href="#" class="simple-text logo-normal" style="color: white;" [@slideInUp]="slideInUp">
+            PROMOQUEST
+            </a>
+        </div>
+
+        <hr style="border-color: #534e4e; margin-left: 5px; margin-right: 10px;">
+ 
+        <mat-nav-list>
+            <ul>
+                <li>
+                    <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['']" [routerLinkActiveOptions]="{exact: true}" >
+                        <mat-icon class="sidenav-icon" >place</mat-icon> {{ 'Generate Promos' | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/list']">
+                        <mat-icon class="sidenav-icon">local_offer</mat-icon> {{ 'Dropped Promos' | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/claims']">
+                        <mat-icon class="sidenav-icon">person_pin_circle</mat-icon> {{ 'Claimed Promos' | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/models']">
+                        <mat-icon class="sidenav-icon">stars</mat-icon> {{ 'AR-Models' | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/users']">
+                        <mat-icon class="sidenav-icon">group</mat-icon> {{ 'Registered Users' | translate }}
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </mat-nav-list> 
+
+        <!-- <p style="color: rgb(95, 92, 92); margin-left: 15px; bottom: 0; position:absolute">&copy;2020 All Rights Reserved</p> -->
+    </div>
+
+
+<!-- <div class="area" >
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+</div > -->
+
+<!-- <div class="context">
+    <h1>Pure Css Animated Background</h1>
+</div> -->
+
+
+

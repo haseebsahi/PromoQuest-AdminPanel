@@ -1,0 +1,44 @@
+<mat-toolbar class="fix-nav col-12">
+  <button type="button" mat-icon-button class="visible-md" (click)="toggleSidebar()">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <!-- <img class="logo" src="../../../../assets/images/PQ3B.png"> -->
+  <!-- <a class="nav-brand" href="#">
+    PromoQuest©
+  </a>   -->
+
+  <p [@slideInLeft]="slideInLeft">Admin Panel</p>
+
+  <span class="nav-spacer"></span>
+
+  <!-- <button class="hidden-sm" mat-icon-button [matMenuTriggerFor]="language">
+        <mat-icon>language</mat-icon>
+    </button> -->
+  <!-- <mat-menu #language="matMenu">
+        <button mat-menu-item (click)="changeLang('en')">
+            <span>{{ 'English' | translate }}</span>
+        </button>
+        <button mat-menu-item (click)="changeLang('fr')">
+            <span>{{ 'French' | translate }}</span>
+        </button>
+        <button mat-menu-item (click)="changeLang('ur')">
+            <span>{{ 'Urdu' | translate }}s</span>
+        </button>
+    </mat-menu> -->
+
+    <div class="nav-buttons">
+      <button mat-icon-button>
+        <mat-icon [@swing]="swing">notifications_none</mat-icon>
+      </button>
+  
+      <button mat-icon-button>
+        <mat-icon [@swing]="swing">settings</mat-icon>
+      </button>
+  
+      <button mat-icon-button (click)="onLoggedout()" class="logout-btn">
+        <mat-icon [@swing]="swing">exit_to_app</mat-icon>
+      </button>
+    </div>
+  <!-- <span class="material-icons">notification-none</span> -->
+  
+</mat-toolbar>
